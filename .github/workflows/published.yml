@@ -5,7 +5,7 @@ name: published my first image docker
 on:
   push:
     branches: 
-      - main
+      - master
 
 jobs:
   push_to_registry:
