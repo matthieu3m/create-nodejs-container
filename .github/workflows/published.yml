@@ -7,6 +7,11 @@ on:
     branches: 
       - master
 
+env:
+  REGISTRY: "docker.io"  # L'URL de Docker Hub (ou un autre registre si nécessaire)
+  IMAGE_NAME: "create-nodejs-container"  # Le nom de ton image Docker
+       
+
 permissions:
   contents: write
   pages: write
