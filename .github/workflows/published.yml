@@ -10,6 +10,7 @@ on:
 env:
   REGISTRY: "docker.io"  # L'URL de Docker Hub (ou un autre registre si nécessaire)
   IMAGE_NAME: "matthieu3m/create-nodejs-container"  # Le nom de ton image Docker
+  TAG: latest
        
 
 permissions: write-all
@@ -48,7 +49,7 @@ jobs:
       - name: Generate artifact attestation
         uses: actions/attest-build-provenance@v2
         with: 
-          subject-name: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME}}
+          subject-name: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME}}:${{ env.TAG }}
           subject-digest: ${{ steps.push.outputs.digest }}
           push-to-registry: true
           github-token: ${{ secrets.GITHUB_TOKEN }} #
