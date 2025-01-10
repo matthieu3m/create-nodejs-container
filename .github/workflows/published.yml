@@ -12,11 +12,7 @@ env:
   IMAGE_NAME: "matthieu3m/create-nodejs-container"  # Le nom de ton image Docker
        
 
-permissions:
-  contents: write
-  pages: write
-  id-token: write
-  actions: write
+permissions: write-all
 
 jobs:
   push_to_registry:
