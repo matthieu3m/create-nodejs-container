@@ -9,7 +9,7 @@ on:
 
 env:
   REGISTRY: "docker.io"  # L'URL de Docker Hub (ou un autre registre si nécessaire)
-  IMAGE_NAME: "matthieu3m/create-nodejs-container"  # Le nom de ton image Docker
+  IMAGE_NAME: "matthieu3m/create-nodejs-containerrrr"  # Le nom de ton image Docker
        
 
 permissions: write-all
