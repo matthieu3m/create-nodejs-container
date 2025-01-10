@@ -45,8 +45,8 @@ jobs:
 
       - name: Generate artifact attestation
         uses: actions/attest-build-provenance@v2
-        with:
-          #subject-name: 
-          #subject-digest:
+        with: # Configuration in progress
+          subject-name: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME}}
+          subject-digest: ${{ steps.push.outputs.digest }}
           push-to-registry: true
           
