@@ -37,7 +37,7 @@ jobs:
         id: meta
         uses: docker/metadata-action@v2
         with:
-          images: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME}}
+          images: ${{ secrets.DOCKER_USERNAME }}/${{ env.IMAGE_NAME}}
       
       - name: Build and push Docker image
         id: push 
