@@ -8,8 +8,8 @@ on:
       - master
 
 env:
-  REGISTRY: "matthieu3m"  # L'URL de Docker Hub (ou un autre registre si nécessaire)
-  IMAGE_NAME: "create-nodejs-container"  # Le nom de ton image Docker
+  REGISTRY: "docker.io"  # L'URL de Docker Hub (ou un autre registre si nécessaire)
+  IMAGE_NAME: "matthieu3m/create-nodejs-container"  # Le nom de ton image Docker
        
 
 permissions:
@@ -37,7 +37,7 @@ jobs:
         id: meta
         uses: docker/metadata-action@v2
         with:
-          images: ${{ secrets.DOCKER_USERNAME }}/${{ env.IMAGE_NAME}}
+          images: ${{ env.REGISTRY  }}/${{ env.IMAGE_NAME}}
       
       - name: Build and push Docker image
         id: push 
